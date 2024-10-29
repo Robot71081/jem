@@ -1,0 +1,110 @@
+.sidebar {
+    min-height: 100vh;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f0f4f9;
+    padding: 25px 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.sidebar:hover {
+    background-color: #e9eff4; /* Subtle hover effect */
+}
+
+.sidebar img {
+    width: 20px;
+    transition: transform 0.2s ease;
+}
+
+.sidebar img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.sidebar .menu {
+    display: block;
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #4a4a4a; /* Darker color for better visibility */
+    transition: color 0.2s ease;
+}
+
+.sidebar .menu:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+.sidebar .new-chat {
+    display: inline-flex;
+    margin-top: 10px;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background-color: #e6eaf1;
+    font-size: 14px;
+    color: #5a5a5a; /* Adjusted color for better contrast */
+    cursor: pointer;
+    border-radius: 25px; /* Rounded corners for a modern look */
+    transition: background-color 0.3s ease;
+}
+
+.sidebar .new-chat:hover {
+    background-color: #d1d5db; /* Darker background on hover */
+}
+
+.sidebar .recent {
+    display: flex;
+    flex-direction: column;
+    animation: fadein 1.5s;
+}
+
+.sidebar .recent-title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333; /* Darker title for emphasis */
+}
+
+.sidebar .recent-entry {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    padding: 10px;
+    padding-right: 40px;
+    border-radius: 50px;
+    color: #282828;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.sidebar .recent-entry:hover {
+    background-color: #e2e6eb;
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+.sidebar {
+    display: block; /* Default is to show on larger screens */
+    /* Other existing styles */
+}
+
+.sidebar.open {
+    display: block; /* Ensure the sidebar shows when open */
+}
+
+
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none; /* Hide sidebar on mobile */
+    }
+
+    .sidebar.open {
+        display: block; /* Show sidebar when open */
+    }
+
+    .toggle-button {
+        display: block; /* Show toggle button on mobile */
+    }
+}
